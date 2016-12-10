@@ -36,6 +36,7 @@ export default class RecipeForm extends Component{
                             required
                             onChange={this.handleIngredientsChange} 
                             value={this.state.ingredients}
+                            placeholder="write ingredients separated by a comma. example: salt, water"
                             />
                             <br />
                             <div className="text-right">

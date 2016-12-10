@@ -98,6 +98,8 @@ class App extends Component {
   render() {
     return (
       <div className="container">
+      <div className="row">
+      <div className="col-xs-12 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
         <NavBar handleAdd={this.onAddClick} />
         <RecipeList 
         recipes={this.state.recipes}
@@ -122,6 +124,8 @@ class App extends Component {
           handleClose={this.onRecipeFormCancel}
           />
         }
+        </div>
+        </div>
         </div>
     );
   }
