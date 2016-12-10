@@ -6,7 +6,7 @@ export default function({handleAdd}){
         <nav className="navbar navbar-inverse">
           <div className="container-fluid">
             <div className="navbar-header">
-              <span className="navbar-brand">Recipe Box</span>
+              <a className="navbar-brand" href="https://github.com/AdelMahjoub/recipe-box" target="_blank">Recipe Box</a>
             </div>
             <div className="navbar-form navbar-right" title="add a recipe">
                 <Button 

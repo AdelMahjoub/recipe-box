@@ -5,28 +5,54 @@ import NavBar from './components/navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+const SampleRecipes = [
+  {
+    name: "Ginger Champagne",
+    ingredients: ["champagne", "ginger", "ice", "vodka"]
+  },
+  {
+    name: "Potato and Cheese Frittata",
+    ingredients: ["cheddar cheese", "eggs", "olive oil", "onions", "potato", "salt"]
+  },
+  {
+    name: "Eggnog Thumbprints",
+    ingredients: ["brown sugar", "butter", "powdered sugar", "eggs", "flour", "nutmeg", "rum", "salt", "vanilla extract", "sugar"]
+  },
+  {
+    name: "Succulent Pork Roast",
+    ingredients: ["brown sugar", "garlic", "pork chops", "water"]
+  },
+  {
+    name: "Irish Champ",
+    ingredients: ["black pepper", "butter", "green onion", "milk", "potato", "salt"]
+  },
+  {
+    name: "Chocolate-Cherry Thumbprints",
+    ingredients: ["cocoa powder", "baking powder", "butter", "eggs", "flour", "oats", "salt", "sugar", "vanilla extract"]
+  },
+  {
+    name: "Mean Woman Pasta",
+    ingredients: ["garlic", "kalamata olive", "olive oil", "pepperoncini", "seashell pasta", "tomato"]
+  },
+  {
+    name: "Hot Spiced Cider",
+    ingredients: ["allspice", "apple cider", "brown sugar", "cinnamon", "cloves", "nutmeg", "orange", "salt"]
+  },
+  {
+    name: "Isa's Cola de Mono",
+    ingredients: ["cinnamon", "cloves", "instant coffee", "milk", "rum", "vanilla extract", "water", "sugar"]
+  },
+  {
+    name: "Amy's Barbecue Chicken Salad",
+    ingredients: ["barbecue sauce", "chicken", "cilantro", "lettuce", "ranch dressing", "lettuce", "tomato"]
+  }
+]
+
 class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      recipes : [
-        {
-          name: "Spaguetti",
-          ingredients: [
-            "water",
-            "salt",
-            "tomatos",
-            "basilic"
-          ]
-        },
-        {
-          name: "Roas Duck",
-          ingredients: [
-            "Duck",
-            "glaze"
-          ]
-        }
-      ],
+      recipes : [],
       add: false,
       edit: false,
       target: null
@@ -90,6 +116,8 @@ class App extends Component {
       this.setState({
         recipes: JSON.parse(localStorage.getItem('_SultanCodeCamp_recipes'))
       })
+    }else{
+      this.setState({recipes: SampleRecipes});
     }
   }
   componentDidUpdate(){
