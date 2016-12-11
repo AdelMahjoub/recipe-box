@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import RecipeList from './components/recipe-list';
 import RecipeForm from './components/recipe-form';
 import NavBar from './components/navbar';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 const SampleRecipes = [
