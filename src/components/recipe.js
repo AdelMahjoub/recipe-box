@@ -6,8 +6,8 @@ import Button from './button';
 export default function({recipe, handleEdit,handleDelete, index}){
     return(
         <div className="list-group-item">
-            <RecipeName name={recipe.name}/>
-            <div className="hidden">
+            <RecipeName name={recipe.name} index={index}/>
+            <div id={`details${index}`} className="collapse">
                 <ul className="list-group">
                     {
                         recipe.ingredients.map((ingredient,index) => <Ingredient key={index} ingredient={ingredient}/>)

@@ -4,12 +4,6 @@ html{
 body{
     padding-top: 2%;
 }
-.hidden{
-    display: none;
-}
-.visible{
-    display: block;
-}
 .recipe-name{
     cursor: pointer;
 }
